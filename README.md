@@ -1,5 +1,10 @@
 # cofee-bar
 
+## Description
+```
+Coffee bar open project
+```
+
 ## Project setup
 ```
 npm install

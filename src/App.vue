@@ -1,9 +1,9 @@
+<script setup>
+import AppHeader from "./components/AppHeader.vue";
+</script>
+
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <AppHeader></AppHeader>
 </template>
 
 <style lang="scss">
@@ -12,19 +12,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #395775;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+  color: #c2c51b;
+  width: 100vw;
+  height: 100vh;
 }
 </style>
