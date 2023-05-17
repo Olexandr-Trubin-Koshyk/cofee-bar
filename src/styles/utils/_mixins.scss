@@ -1,0 +1,19 @@
+@mixin bg-gradient-dark {
+  background-color: #000000;
+  background-image: linear-gradient(
+    315deg,
+    #414141 0%,
+    #000000 55%,
+    #414141 74%
+  );
+}
+
+@mixin bg-gradient-light {
+  background-color: #d2a813;
+  background-image: linear-gradient(
+    315deg,
+    #e6b70f 0%,
+    #000000 55%,
+    #e6b70f 74%,
+  );
+}

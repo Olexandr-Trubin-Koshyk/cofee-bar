@@ -1,0 +1,9 @@
+@import "reset";
+@import "normalize";
+@import "./utils/mixins";
+@import "./utils/vars";
+
+.contentWrapper {
+  width: 100%;
+  max-width: 1280px;
+}
