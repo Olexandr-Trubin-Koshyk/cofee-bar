@@ -11,10 +11,11 @@ import VButton from "../ui/VButton";
             <p class="mainInfo__sloganTitle mainInfo__sloganTitle--stroke">
               Have you forgotten
             </p>
-            <p class="mainInfo__sloganTitle">how good we make</p>
+            <p class="mainInfo__sloganTitle">how good we</p>
             <p class="mainInfo__sloganTitle mainInfo__sloganTitle--stroke">
-              best aroma tastes?
+              make best aroma
             </p>
+            <p class="mainInfo__sloganTitle">tastes?</p>
           </div>
           <div class="mainInfo__sloganSubInfo">
             <div class="mainInfo__moreAboutNav">
@@ -39,7 +40,7 @@ import VButton from "../ui/VButton";
             </div>
           </div>
         </div>
-        <div class="mainInfo__imageBlock">NOT HELLO WORLD</div>
+        <div class="mainInfo__imageBlock"></div>
       </div>
     </div>
   </div>
@@ -96,6 +97,7 @@ import VButton from "../ui/VButton";
   &__moreAboutNav {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
     gap: 10px;
     height: 200px;
@@ -144,6 +146,15 @@ import VButton from "../ui/VButton";
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
+  }
+
+  &__imageBlock {
+    border-radius: 20px;
+    background-image: url(../assets/main-info-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 500px;
   }
 }
 </style>
