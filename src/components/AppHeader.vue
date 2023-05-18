@@ -58,8 +58,8 @@ export default {};
       to top left,
       $bg-main-color 0%,
       $bg-main-color 50%,
-      #ffec7a 50%,
-      #ffec7a 100%
+      $color-yellow-light 50%,
+      $color-yellow-light 100%
     );
   }
 
