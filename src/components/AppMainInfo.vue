@@ -60,6 +60,7 @@ import VButton from "../ui/VButton";
   &__infoBlock {
     display: flex;
     justify-content: space-between;
+    @include noSelectText;
   }
 
   &__sloganBlock {

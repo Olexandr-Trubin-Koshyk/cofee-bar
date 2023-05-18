@@ -78,6 +78,7 @@ export default {};
   &__navList {
     display: flex;
     gap: 60px;
+    @include noSelectText;
   }
 
   &__navWrapper {
