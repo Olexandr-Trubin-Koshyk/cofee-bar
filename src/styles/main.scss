@@ -3,6 +3,9 @@
 @import "./utils/mixins";
 @import "./utils/vars";
 
+body {
+  background-color: $bg-main-color;
+}
 .contentWrapper {
   width: 100%;
   max-width: 1170px;

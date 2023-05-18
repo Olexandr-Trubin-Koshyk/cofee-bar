@@ -1,8 +1,6 @@
 <template>
   <header class="header">
-    <div class="header__triangleBg">
-      <div class="header__zCloser"></div>
-    </div>
+    <div class="header__zCloser"></div>
     <div class="header__navMenu">
       <div class="contentWrapper">
         <div class="header__navWrapper">
@@ -35,7 +33,7 @@ export default {};
 @import "../styles/main.scss";
 
 .header {
-  position: sticky;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
@@ -43,36 +41,26 @@ export default {};
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: $bg-main-color;
-
-  &__triangleBg {
-    display: flex;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    justify-content: flex-end;
-    height: 466px;
-    width: 100%;
-    background: linear-gradient(
-      to top left,
-      $bg-main-color 0%,
-      $bg-main-color 50%,
-      $color-yellow-light 50%,
-      $color-yellow-light 100%
-    );
-  }
+  background-color: $color-yellow-light;
+  z-index: 10;
 
   &__zCloser {
     background-color: $bg-main-color;
     flex-basis: 33%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 66px;
+    width: 33vw;
+    z-index: 9;
   }
 
   &__navMenu {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 10px;
+    padding-top: 10px;
+    z-index: 10;
   }
 
   &__navList {

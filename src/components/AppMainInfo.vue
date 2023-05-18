@@ -55,7 +55,7 @@ import VButton from "../ui/VButton";
   display: flex;
   justify-content: center;
   margin-top: 70px;
-  height: 100px;
+  z-index: 2;
 
   &__infoBlock {
     display: flex;
