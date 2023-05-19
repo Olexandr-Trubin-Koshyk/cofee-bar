@@ -46,7 +46,6 @@ export default {};
 
   &__zCloser {
     background-color: $bg-main-color;
-    flex-basis: 33%;
     position: absolute;
     right: 0;
     top: 0;

@@ -26,6 +26,6 @@
 
 .zCloser {
   background-color: $bg-main-color;
-  flex-basis: 33%;
+  width: 33vw;
 }
 </style>
