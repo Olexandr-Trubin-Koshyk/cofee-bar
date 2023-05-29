@@ -17,6 +17,7 @@ import MenuCard from "../ui/MenuCard";
               :subTitle="item.subTitle"
               :imgSrc="item.imgSrc"
               :imgDescription="item.imgDescription"
+              :itemPrice="item.itemPrice"
             />
           </li>
         </ul>
@@ -37,6 +38,7 @@ export default {
           imgSrc:
             "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
           imgDescription: "this is image1 description",
+          itemPrice: "7.50",
         },
         {
           id: "2" + new Date(),
@@ -45,6 +47,7 @@ export default {
           imgSrc:
             "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
           imgDescription: "this is image2 description",
+          itemPrice: "7.50",
         },
         {
           id: "3" + new Date(),
@@ -53,6 +56,7 @@ export default {
           imgSrc:
             "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
           imgDescription: "this is image3 description",
+          itemPrice: "7.50",
         },
         {
           id: "4" + new Date(),
@@ -61,6 +65,7 @@ export default {
           imgSrc:
             "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
           imgDescription: "this is image1 description",
+          itemPrice: "9.99",
         },
         {
           id: "5" + new Date(),
@@ -69,6 +74,7 @@ export default {
           imgSrc:
             "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
           imgDescription: "this is image2 description",
+          itemPrice: "3.99",
         },
         {
           id: "6" + new Date(),
@@ -78,6 +84,7 @@ export default {
           imgSrc:
             "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
           imgDescription: "this is image3 description",
+          itemPrice: "7.50",
         },
       ],
     };
