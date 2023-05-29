@@ -1,8 +1,9 @@
 <script setup>
-import AppHeader from "./components/AppHeader.vue";
-import AppFooter from "./components/AppFooter.vue";
-import AppMainInfo from "./components/AppMainInfo.vue";
+import AppHeader from "./components/AppHeader";
+import AppFooter from "./components/AppFooter";
+import AppMainInfo from "./components/AppMainInfo";
 import AppMenu from "./components/AppMenu";
+import AppAboutUs from "./components/AppAboutUs";
 import BackgroundTriangle from "./ui/BackgroundTriangle";
 </script>
 
@@ -10,6 +11,7 @@ import BackgroundTriangle from "./ui/BackgroundTriangle";
   <BackgroundTriangle></BackgroundTriangle>
   <AppHeader></AppHeader>
   <AppMainInfo></AppMainInfo>
+  <AppAboutUs></AppAboutUs>
   <AppMenu></AppMenu>
   <AppFooter></AppFooter>
 </template>

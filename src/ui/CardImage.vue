@@ -47,8 +47,9 @@ export default {
       transparent 0%,
       transparent 50%,
       $color-marine-blue-transparent 50%,
+      $color-marine-blue 65%,
       $color-marine-blue 75%,
-      $color-marine-blue 100%
+      $color-marine-blue-transparent 100%
     );
   }
 

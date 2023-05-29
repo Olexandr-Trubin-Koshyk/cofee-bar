@@ -2,9 +2,13 @@
   <div class="footer">
     <div class="contentWrapper">
       <div class="footer__mainBlock">
-        <div class="footer__addressBlock">
+        <div
+          class="footer__addressBlock"
+          @click="goToLink(links.map)"
+          title="Click to see our location on Google Maps"
+        >
           <div class="footer__title">Address</div>
-          <div class="footer__subTitle" @click="goToSocialPage(links.map)">
+          <div class="footer__subTitle">
             United Kingdom 99 Staple Hill Road, Bristol, BS16 5AD
           </div>
         </div>
@@ -12,21 +16,23 @@
           <div class="footer__socials">
             <div
               class="footer__socialIcon footer__socialIcon--twitter"
-              @click="goToSocialPage(links.twitter)"
+              @click="goToLink(links.twitter)"
             ></div>
             <div
               class="footer__socialIcon footer__socialIcon--instagram"
-              @click="goToSocialPage(links.instagram)"
+              @click="goToLink(links.instagram)"
             ></div>
             <div
               class="footer__socialIcon footer__socialIcon--facebook"
-              @click="goToSocialPage(links.facebook)"
+              @click="goToLink(links.facebook)"
             ></div>
           </div>
-          <div class="footer__logo"><a href="#main">CoffeeBar</a></div>
+          <div class="footer__logo">
+            <a href="#main" title="To start of page">CoffeeBar</a>
+          </div>
         </div>
         <div class="footer__copywriteBlock">
-          <div class="footer__title">About us</div>
+          <div class="footer__title"><a href="#about-us">About us</a></div>
           <div class="footer__subTitle">
             ©
             {{
@@ -55,7 +61,7 @@ export default {
     };
   },
   methods: {
-    goToSocialPage(page) {
+    goToLink(page) {
       window.open(page, "_blank");
     },
   },
