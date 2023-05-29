@@ -3,7 +3,7 @@ import MenuCard from "../ui/MenuCard";
 </script>
 
 <template>
-  <div class="menu">
+  <div class="menu" id="menu">
     <div class="contentWrapper">
       <div class="menu__titlesBlock">
         <span class="menu__title">CoffeeBar</span>
@@ -91,7 +91,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  margin-top: 80px;
+  padding-top: 70px;
 
   &__title {
     font-family: "Bebas Neue", sans-serif;

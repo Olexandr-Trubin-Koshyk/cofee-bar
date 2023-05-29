@@ -3,9 +3,24 @@
 @import "./utils/mixins";
 @import "./utils/vars";
 
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
 body {
   background-color: $bg-main-color;
 }
+
 .contentWrapper {
   width: 100%;
   max-width: 1170px;

@@ -11,6 +11,7 @@ import BackgroundTriangle from "./ui/BackgroundTriangle";
   <AppHeader></AppHeader>
   <AppMainInfo></AppMainInfo>
   <AppMenu></AppMenu>
+  <AppFooter></AppFooter>
 </template>
 
 <style lang="scss">

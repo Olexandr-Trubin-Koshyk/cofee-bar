@@ -3,7 +3,7 @@ import VButton from "../ui/VButton";
 </script>
 
 <template>
-  <div class="mainInfo">
+  <div class="mainInfo" id="main">
     <div class="contentWrapper">
       <div class="mainInfo__infoBlock">
         <div class="mainInfo__sloganBlock">
@@ -18,10 +18,12 @@ import VButton from "../ui/VButton";
             <p class="mainInfo__sloganTitle">tastes?</p>
           </div>
           <div class="mainInfo__sloganSubInfo">
-            <div class="mainInfo__moreAboutNav">
-              <div class="mainInfo__moreAboutTitle">More about CoffeeBar</div>
-              <div class="mainInfo__moreAboutArrow"></div>
-            </div>
+            <a href="#menu">
+              <div class="mainInfo__moreAboutNav">
+                <div class="mainInfo__moreAboutTitle">More about CoffeeBar</div>
+                <div class="mainInfo__moreAboutArrow"></div>
+              </div>
+            </a>
             <div class="mainInfo__buyNowBlock">
               <div class="mainInfo__priceBlock">
                 <div class="mainInfo__price">$ 7,50</div>
@@ -54,7 +56,7 @@ import VButton from "../ui/VButton";
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  padding-top: 70px;
   z-index: 2;
 
   &__infoBlock {
