@@ -17,14 +17,17 @@
             <div
               class="footer__socialIcon footer__socialIcon--twitter"
               @click="goToLink(links.twitter)"
+              title="Follow us on Twitter"
             ></div>
             <div
               class="footer__socialIcon footer__socialIcon--instagram"
               @click="goToLink(links.instagram)"
+              title="Follow us on Instagram"
             ></div>
             <div
               class="footer__socialIcon footer__socialIcon--facebook"
               @click="goToLink(links.facebook)"
+              title="Follow us on Facebook"
             ></div>
           </div>
           <div class="footer__logo">

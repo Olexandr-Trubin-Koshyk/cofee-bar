@@ -103,14 +103,14 @@ import VButton from "../ui/VButton";
     justify-content: flex-end;
     align-items: center;
     gap: 10px;
-    height: 200px;
+    height: 220px;
     cursor: pointer;
   }
 
   &__moreAboutTitle {
     color: $color-marine-blue;
     font-family: Manrope, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     writing-mode: vertical-rl;
   }

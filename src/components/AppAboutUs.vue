@@ -103,7 +103,7 @@
   &__moreAboutTitle {
     color: $color-marine-blue;
     font-family: Manrope, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 18px;
     writing-mode: vertical-rl;
   }
