@@ -2,7 +2,7 @@
   <div class="card">
     <img class="card__image" :src="imgSrc" :alt="imgDescription" />
     <div class="card__title">{{ title }}</div>
-    <div class="card__subtitle">{{ subTitle }}</div>
+    <div class="card__subTitle">{{ subTitle }}</div>
   </div>
 </template>
 
@@ -21,10 +21,13 @@ export default {
   align-items: center;
   gap: 20px;
   width: 100%;
+  max-width: 375px;
+  margin-bottom: 24px;
 
   &__image {
     max-width: 375px;
     max-height: 375px;
+    border-radius: 12px;
   }
 
   &__title {

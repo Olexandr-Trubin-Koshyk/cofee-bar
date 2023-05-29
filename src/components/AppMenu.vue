@@ -11,28 +11,12 @@ import MenuCard from "../ui/MenuCard";
       </div>
       <div class="menu__items">
         <ul class="menu__itemsList">
-          <li class="menu__item">
+          <li class="menu__item" v-for="item in items" :key="item.id">
             <MenuCard
-              title="Test title 1"
-              subTitle="menu subtitle lorem ipsun test test test test !"
-              imgSrc="https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg"
-              imgDescription="this is image1 description"
-            />
-          </li>
-          <li class="menu__item">
-            <MenuCard
-              title="Test title 2"
-              subTitle="menu subtitle lorem ipsun test test test test !"
-              imgSrc="https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg"
-              imgDescription="this is image2 description"
-            />
-          </li>
-          <li class="menu__item">
-            <MenuCard
-              title="Test title 3"
-              subTitle="menu subtitle lorem ipsun test test test test !"
-              imgSrc="https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg"
-              imgDescription="this is image3 description"
+              :title="item.title"
+              :subTitle="item.subTitle"
+              :imgSrc="item.imgSrc"
+              :imgDescription="item.imgDescription"
             />
           </li>
         </ul>
@@ -40,6 +24,66 @@ import MenuCard from "../ui/MenuCard";
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: [
+        {
+          id: "1" + new Date(),
+          title: "Test title 1",
+          subTitle: "menu subtitle lorem ipsun test test test test !",
+          imgSrc:
+            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+          imgDescription: "this is image1 description",
+        },
+        {
+          id: "2" + new Date(),
+          title: "Test title 2",
+          subTitle: "menu subtitle lorem ipsun test test test test !",
+          imgSrc:
+            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+          imgDescription: "this is image2 description",
+        },
+        {
+          id: "3" + new Date(),
+          title: "Test title 3",
+          subTitle: "menu subtitle lorem ipsun test test test test !",
+          imgSrc:
+            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+          imgDescription: "this is image3 description",
+        },
+        {
+          id: "4" + new Date(),
+          title: "Test title 4",
+          subTitle: "menu subtitle lorem ipsun test test test test !",
+          imgSrc:
+            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+          imgDescription: "this is image1 description",
+        },
+        {
+          id: "5" + new Date(),
+          title: "Test title 5",
+          subTitle: "menu subtitle lorem ipsun test test test test !",
+          imgSrc:
+            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+          imgDescription: "this is image2 description",
+        },
+        {
+          id: "6" + new Date(),
+          title: "Test title 6",
+          subTitle:
+            "menu subtitle lorem ipsun test test test test ! menu subtitle lorem ipsun test test test test subtitle lorem ipsun test test test test !",
+          imgSrc:
+            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+          imgDescription: "this is image3 description",
+        },
+      ],
+    };
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 @import "../styles/main.scss";
@@ -63,6 +107,18 @@ import MenuCard from "../ui/MenuCard";
       -webkit-text-stroke-width: 1px;
       -webkit-text-stroke-color: $color-marine-blue;
     }
+  }
+
+  &__items {
+    width: 100%;
+  }
+
+  &__itemsList {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 </style>
