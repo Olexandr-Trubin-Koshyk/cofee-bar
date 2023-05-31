@@ -1,31 +1,26 @@
 <template>
   <div class="aboutUs" id="about-us">
-    <div class="contentWrapper">
-      <div class="aboutUs__mainBlock">
-        <div class="aboutUs__title">About Us</div>
-        <div class="aboutUs__mainInfo">
-          <div class="aboutUs__interiorImage"></div>
-          <div class="aboutUs__info">
-            <div class="aboutUs__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
-              sollicitudin lobortis arcu, eget faucibus sapien vestibulum et.
-              Fusce nec consectetur mi. In sit amet sem sed felis consectetur
-              vulputate ut ut enim. Nunc dui lacus, condimentum ut arcu ut,
-              aliquam facilisis purus. Nunc ut nulla quis elit convallis
-              pulvinar non a velit. Class aptent taciti sociosqu ad litora
-              torquent per conubia nostra, per inceptos himenaeos. Mauris
-              tristique vehicula felis eget pretium.
+    <div class="aboutUs__title">About Us</div>
+    <div class="aboutUs__mainInfo">
+      <div class="aboutUs__interiorImage"></div>
+      <div class="aboutUs__info">
+        <div class="aboutUs__description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam
+          sollicitudin lobortis arcu, eget faucibus sapien vestibulum et. Fusce
+          nec consectetur mi. In sit amet sem sed felis consectetur vulputate ut
+          ut enim. Nunc dui lacus, condimentum ut arcu ut, aliquam facilisis
+          purus. Nunc ut nulla quis elit convallis pulvinar non a velit. Class
+          aptent taciti sociosqu ad litora torquent per conubia nostra, per
+          inceptos himenaeos. Mauris tristique vehicula felis eget pretium.
+        </div>
+        <div class="aboutUs__navBlock">
+          <div></div>
+          <a href="#menu" class="aboutUs__link">
+            <div class="aboutUs__moreAboutNav">
+              <div class="aboutUs__moreAboutTitle">Contact Us</div>
+              <div class="aboutUs__moreAboutArrow"></div>
             </div>
-            <div class="aboutUs__navBlock">
-              <div></div>
-              <a href="#menu" class="aboutUs__link">
-                <div class="aboutUs__moreAboutNav">
-                  <div class="aboutUs__moreAboutTitle">Contact Us</div>
-                  <div class="aboutUs__moreAboutArrow"></div>
-                </div>
-              </a>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -37,24 +32,13 @@
 
 .aboutUs {
   display: flex;
+  gap: 24px;
   flex-direction: column;
-  align-items: center;
   margin-top: 80px;
   padding-top: 70px;
 
-  &__mainBlock {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
   &__title {
-    font-family: "Bebas Neue", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 58px;
-    line-height: 70px;
-    letter-spacing: 0.155em;
+    @include titleBlack;
   }
 
   &__mainInfo {

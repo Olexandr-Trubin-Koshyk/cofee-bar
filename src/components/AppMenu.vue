@@ -4,24 +4,22 @@ import MenuCard from "../ui/MenuCard";
 
 <template>
   <div class="menu" id="menu">
-    <div class="contentWrapper">
-      <div class="menu__titlesBlock">
-        <span class="menu__title">CoffeeBar</span>
-        <span class="menu__title menu__title--stroke">Menu</span>
-      </div>
-      <div class="menu__items">
-        <ul class="menu__itemsList">
-          <li class="menu__item" v-for="item in items" :key="item.id">
-            <MenuCard
-              :title="item.title"
-              :subTitle="item.subTitle"
-              :imgSrc="item.imgSrc"
-              :imgDescription="item.imgDescription"
-              :itemPrice="item.itemPrice"
-            />
-          </li>
-        </ul>
-      </div>
+    <div class="menu__titlesBlock">
+      <span class="menu__title">CoffeeBar</span>
+      <span class="menu__title menu__title--stroke">Menu</span>
+    </div>
+    <div class="menu__items">
+      <ul class="menu__itemsList">
+        <li class="menu__item" v-for="item in items" :key="item.id">
+          <MenuCard
+            :title="item.title"
+            :subTitle="item.subTitle"
+            :imgSrc="item.imgSrc"
+            :imgDescription="item.imgDescription"
+            :itemPrice="item.itemPrice"
+          />
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -97,7 +95,6 @@ export default {
 .menu {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-top: 80px;
   padding-top: 70px;
 

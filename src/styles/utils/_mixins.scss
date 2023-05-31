@@ -26,3 +26,12 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+@mixin titleBlack {
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 70px;
+  letter-spacing: 0.155em;
+}

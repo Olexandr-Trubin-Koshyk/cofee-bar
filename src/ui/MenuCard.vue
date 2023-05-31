@@ -42,6 +42,7 @@ export default {
   &__subTitle {
     font-family: "Manrope";
     font-style: normal;
+    text-align: justify;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;

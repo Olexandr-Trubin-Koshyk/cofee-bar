@@ -1,51 +1,47 @@
 <template>
   <div class="footer">
-    <div class="contentWrapper">
-      <div class="footer__mainBlock">
+    <div
+      class="footer__addressBlock"
+      @click="goToLink(links.map)"
+      title="Click to see our location on Google Maps"
+    >
+      <div class="footer__title">Address</div>
+      <div class="footer__subTitle">
+        United Kingdom 99 Staple Hill Road, Bristol, BS16 5AD
+      </div>
+    </div>
+    <div class="footer__socialsBlock">
+      <div class="footer__socials">
         <div
-          class="footer__addressBlock"
-          @click="goToLink(links.map)"
-          title="Click to see our location on Google Maps"
-        >
-          <div class="footer__title">Address</div>
-          <div class="footer__subTitle">
-            United Kingdom 99 Staple Hill Road, Bristol, BS16 5AD
-          </div>
-        </div>
-        <div class="footer__socialsBlock">
-          <div class="footer__socials">
-            <div
-              class="footer__socialIcon footer__socialIcon--twitter"
-              @click="goToLink(links.twitter)"
-              title="Follow us on Twitter"
-            ></div>
-            <div
-              class="footer__socialIcon footer__socialIcon--instagram"
-              @click="goToLink(links.instagram)"
-              title="Follow us on Instagram"
-            ></div>
-            <div
-              class="footer__socialIcon footer__socialIcon--facebook"
-              @click="goToLink(links.facebook)"
-              title="Follow us on Facebook"
-            ></div>
-          </div>
-          <div class="footer__logo">
-            <a href="#main" title="To start of page">CoffeeBar</a>
-          </div>
-        </div>
-        <div class="footer__copywriteBlock">
-          <div class="footer__title"><a href="#about-us">About us</a></div>
-          <div class="footer__subTitle">
-            ©
-            {{
-              new Date().getFullYear() === 2023
-                ? new Date().getFullYear()
-                : "2023 - " + new Date().getFullYear()
-            }}
-            by CoffeeBar
-          </div>
-        </div>
+          class="footer__socialIcon footer__socialIcon--twitter"
+          @click="goToLink(links.twitter)"
+          title="Follow us on Twitter"
+        ></div>
+        <div
+          class="footer__socialIcon footer__socialIcon--instagram"
+          @click="goToLink(links.instagram)"
+          title="Follow us on Instagram"
+        ></div>
+        <div
+          class="footer__socialIcon footer__socialIcon--facebook"
+          @click="goToLink(links.facebook)"
+          title="Follow us on Facebook"
+        ></div>
+      </div>
+      <div class="footer__logo">
+        <a href="#main" title="To start of page">CoffeeBar</a>
+      </div>
+    </div>
+    <div class="footer__copywriteBlock">
+      <div class="footer__title"><a href="#about-us">About us</a></div>
+      <div class="footer__subTitle">
+        ©
+        {{
+          new Date().getFullYear() === 2023
+            ? new Date().getFullYear()
+            : "2023 - " + new Date().getFullYear()
+        }}
+        by CoffeeBar
       </div>
     </div>
   </div>
@@ -80,15 +76,9 @@ export default {
   bottom: 0;
   width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-
-  &__mainBlock {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 74px;
-    padding-bottom: 64px;
-  }
+  justify-content: space-between;
+  padding-top: 74px;
+  padding-bottom: 64px;
 
   &__addressBlock,
   &__copywriteBlock,

@@ -4,47 +4,43 @@ import VButton from "../ui/VButton";
 
 <template>
   <div class="mainInfo" id="main">
-    <div class="contentWrapper">
-      <div class="mainInfo__infoBlock">
-        <div class="mainInfo__sloganBlock">
-          <div class="mainInfo__sloganTitleBlock">
-            <p class="mainInfo__sloganTitle mainInfo__sloganTitle--stroke">
-              Have you forgotten
-            </p>
-            <p class="mainInfo__sloganTitle">how good we</p>
-            <p class="mainInfo__sloganTitle mainInfo__sloganTitle--stroke">
-              make best aroma
-            </p>
-            <p class="mainInfo__sloganTitle">tastes?</p>
+    <div class="mainInfo__sloganBlock">
+      <div class="mainInfo__sloganTitleBlock">
+        <p class="mainInfo__sloganTitle mainInfo__sloganTitle--stroke">
+          Have you forgotten
+        </p>
+        <p class="mainInfo__sloganTitle">how good we</p>
+        <p class="mainInfo__sloganTitle mainInfo__sloganTitle--stroke">
+          make best aroma
+        </p>
+        <p class="mainInfo__sloganTitle">tastes?</p>
+      </div>
+      <div class="mainInfo__sloganSubInfo">
+        <a href="#menu">
+          <div class="mainInfo__moreAboutNav">
+            <div class="mainInfo__moreAboutTitle">More about CoffeeBar</div>
+            <div class="mainInfo__moreAboutArrow"></div>
           </div>
-          <div class="mainInfo__sloganSubInfo">
-            <a href="#menu">
-              <div class="mainInfo__moreAboutNav">
-                <div class="mainInfo__moreAboutTitle">More about CoffeeBar</div>
-                <div class="mainInfo__moreAboutArrow"></div>
-              </div>
-            </a>
-            <div class="mainInfo__buyNowBlock">
-              <div class="mainInfo__priceBlock">
-                <div class="mainInfo__price">$ 7,50</div>
-                <div class="mainInfo__priceSubtitle">
-                  Get the second order in half price
-                </div>
-              </div>
-              <div class="mainInfo__buyButton">
-                <VButton
-                  className="primary--2"
-                  buttonTitle="buy now"
-                  type="button"
-                  :handleClick="() => console.log('click')"
-                ></VButton>
-              </div>
+        </a>
+        <div class="mainInfo__buyNowBlock">
+          <div class="mainInfo__priceBlock">
+            <div class="mainInfo__price">$ 7,50</div>
+            <div class="mainInfo__priceSubtitle">
+              Get the second order in half price
             </div>
           </div>
+          <div class="mainInfo__buyButton">
+            <VButton
+              className="primary--2"
+              buttonTitle="buy now"
+              type="button"
+              :handleClick="() => console.log('click')"
+            ></VButton>
+          </div>
         </div>
-        <div class="mainInfo__imageBlock"></div>
       </div>
     </div>
+    <div class="mainInfo__imageBlock"></div>
   </div>
 </template>
 
@@ -55,15 +51,10 @@ import VButton from "../ui/VButton";
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  @include noSelectText;
   padding-top: 70px;
   z-index: 2;
-
-  &__infoBlock {
-    display: flex;
-    justify-content: space-between;
-    @include noSelectText;
-  }
 
   &__sloganBlock {
     flex-basis: 50%;
