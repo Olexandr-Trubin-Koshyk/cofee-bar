@@ -1,7 +1,3 @@
-<script setup>
-import VButton from "../ui/VButton";
-</script>
-
 <template>
   <div class="mainInfo" id="main">
     <div class="mainInfo__sloganBlock">
@@ -18,7 +14,9 @@ import VButton from "../ui/VButton";
       <div class="mainInfo__sloganSubInfo">
         <a href="#menu">
           <div class="mainInfo__moreAboutNav">
-            <div class="mainInfo__moreAboutTitle">More about CoffeeBar</div>
+            <div class="mainInfo__moreAboutTitle">
+              More about {{ siteTitle }}
+            </div>
             <div class="mainInfo__moreAboutArrow"></div>
           </div>
         </a>
@@ -34,7 +32,7 @@ import VButton from "../ui/VButton";
               className="primary--2"
               buttonTitle="buy now"
               type="button"
-              :handleClick="() => console.log('click')"
+              :handleClick="handleBuyNow"
             ></VButton>
           </div>
         </div>
@@ -43,6 +41,24 @@ import VButton from "../ui/VButton";
     <div class="mainInfo__imageBlock"></div>
   </div>
 </template>
+
+<script lang="ts">
+import { inject } from "vue";
+import VButton from "../ui/VButton.vue";
+
+export default {
+  components: {
+    VButton,
+  },
+  setup() {
+    const siteTitle = inject("siteTitle");
+
+    const handleBuyNow = () => console.log("click");
+
+    return { handleBuyNow, siteTitle };
+  },
+};
+</script>
 
 <style scoped lang="scss">
 @import "../styles/main.scss";

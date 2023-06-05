@@ -4,7 +4,9 @@
     <div class="header__navMenu">
       <div class="contentWrapper">
         <div class="header__navWrapper">
-          <a href="#main"><div class="header__navLogo">COFFEEBAR</div></a>
+          <a href="#main"
+            ><div class="header__navLogo">{{ siteTitle }}</div></a
+          >
           <nav class="header__nav">
             <ul class="header__navList">
               <li class="header__navItem">
@@ -26,7 +28,17 @@
 </template>
 
 <script lang="ts">
-export default {};
+import { inject } from "vue";
+
+export default {
+  setup() {
+    const siteTitle = inject("siteTitle");
+
+    return {
+      siteTitle,
+    };
+  },
+};
 </script>
 
 <style lang="scss">
@@ -81,6 +93,7 @@ export default {};
     font-size: 36px;
     line-height: 43.2px;
     letter-spacing: 6%;
+    text-transform: capitalize;
     cursor: pointer;
   }
 

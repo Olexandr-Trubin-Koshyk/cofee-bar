@@ -2,67 +2,79 @@
   <div class="footer">
     <div
       class="footer__addressBlock"
-      @click="goToLink(links.map)"
+      @click="openLink(contacts.map)"
       title="Click to see our location on Google Maps"
     >
       <div class="footer__title">Address</div>
-      <div class="footer__subTitle">
-        United Kingdom 99 Staple Hill Road, Bristol, BS16 5AD
-      </div>
+      <div class="footer__subTitle">{{ contacts.address }}</div>
     </div>
     <div class="footer__socialsBlock">
       <div class="footer__socials">
         <div
           class="footer__socialIcon footer__socialIcon--twitter"
-          @click="goToLink(links.twitter)"
+          @click="openLink(contacts.twitter)"
           title="Follow us on Twitter"
         ></div>
         <div
           class="footer__socialIcon footer__socialIcon--instagram"
-          @click="goToLink(links.instagram)"
+          @click="openLink(contacts.instagram)"
           title="Follow us on Instagram"
         ></div>
         <div
           class="footer__socialIcon footer__socialIcon--facebook"
-          @click="goToLink(links.facebook)"
+          @click="openLink(contacts.facebook)"
           title="Follow us on Facebook"
         ></div>
       </div>
       <div class="footer__logo">
-        <a href="#main" title="To start of page">CoffeeBar</a>
+        <a href="#main" title="To start of page">{{ siteTitle }}</a>
       </div>
     </div>
     <div class="footer__copywriteBlock">
       <div class="footer__title"><a href="#about-us">About us</a></div>
       <div class="footer__subTitle">
         ©
-        {{
-          new Date().getFullYear() === 2023
-            ? new Date().getFullYear()
-            : "2023 - " + new Date().getFullYear()
-        }}
-        by CoffeeBar
+        {{ getCopywritesYears }}
+        by {{ siteTitle }}
       </div>
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import ContactsData from "@/types/ContactsData";
+import { inject } from "vue";
+import { computed } from "vue";
+import { ref } from "vue";
+
 export default {
-  data() {
-    return {
-      links: {
-        twitter: "https://twitter.com",
-        instagram: "https://www.instagram.com",
-        facebook: "https://facebook.com/",
-        map: "https://goo.gl/maps/HC71kbtbdzdTZuSH7?coh=178571&entry=tt",
-      },
+  setup() {
+    const siteTitle = inject("siteTitle");
+
+    const contacts = ref<ContactsData>({
+      twitter: "https://twitter.com",
+      instagram: "https://www.instagram.com",
+      facebook: "https://facebook.com/",
+      map: "https://goo.gl/maps/HC71kbtbdzdTZuSH7?coh=178571&entry=tt",
+      address: "United Kingdom 99 Staple Hill Road, Bristol, BS16 5AD",
+    });
+
+    const openLink = (page: string) => {
+      page.startsWith("https://") && window.open(page, "_blank");
     };
-  },
-  methods: {
-    goToLink(page) {
-      window.open(page, "_blank");
-    },
+
+    const getCopywritesYears = computed(() =>
+      new Date().getFullYear() === 2023
+        ? new Date().getFullYear()
+        : "2023 - " + new Date().getFullYear()
+    );
+
+    return {
+      contacts,
+      openLink,
+      getCopywritesYears,
+      siteTitle,
+    };
   },
 };
 </script>

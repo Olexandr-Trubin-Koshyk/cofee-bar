@@ -1,11 +1,7 @@
-<script setup>
-import MenuCard from "../ui/MenuCard";
-</script>
-
 <template>
   <div class="menu" id="menu">
     <div class="menu__titlesBlock">
-      <span class="menu__title">CoffeeBar</span>
+      <span class="menu__title">{{ siteTitle }}</span>
       <span class="menu__title menu__title--stroke">Menu</span>
     </div>
     <div class="menu__items">
@@ -24,67 +20,80 @@ import MenuCard from "../ui/MenuCard";
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import { ref } from "vue";
+import MenuCard from "../ui/MenuCard.vue";
+import { inject } from "vue";
+import MenuItem from "@/types/MenuItem";
+
 export default {
-  data() {
+  components: {
+    MenuCard,
+  },
+  setup() {
+    const siteTitle = inject("siteTitle");
+
+    const items = ref<MenuItem[]>([
+      {
+        id: "1" + new Date(),
+        title: "Test title 1",
+        subTitle: "menu subtitle lorem ipsun test test test test !",
+        imgSrc:
+          "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+        imgDescription: "this is image1 description",
+        itemPrice: "7.50",
+      },
+      {
+        id: "2" + new Date(),
+        title: "Test title 2",
+        subTitle: "menu subtitle lorem ipsun test test test test !",
+        imgSrc:
+          "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+        imgDescription: "this is image2 description",
+        itemPrice: "7.50",
+      },
+      {
+        id: "3" + new Date(),
+        title: "Test title 3",
+        subTitle: "menu subtitle lorem ipsun test test test test !",
+        imgSrc:
+          "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+        imgDescription: "this is image3 description",
+        itemPrice: "7.50",
+      },
+      {
+        id: "4" + new Date(),
+        title: "Test title 4",
+        subTitle: "menu subtitle lorem ipsun test test test test !",
+        imgSrc:
+          "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+        imgDescription: "this is image1 description",
+        itemPrice: "9.99",
+      },
+      {
+        id: "5" + new Date(),
+        title: "Test title 5",
+        subTitle: "menu subtitle lorem ipsun test test test test !",
+        imgSrc:
+          "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+        imgDescription: "this is image2 description",
+        itemPrice: "3.99",
+      },
+      {
+        id: "6" + new Date(),
+        title: "Test title 6",
+        subTitle:
+          "menu subtitle lorem ipsun test test test test ! menu subtitle lorem ipsun test test test test subtitle lorem ipsun test test test test !",
+        imgSrc:
+          "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
+        imgDescription: "this is image3 description",
+        itemPrice: "7.50",
+      },
+    ]);
+
     return {
-      items: [
-        {
-          id: "1" + new Date(),
-          title: "Test title 1",
-          subTitle: "menu subtitle lorem ipsun test test test test !",
-          imgSrc:
-            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
-          imgDescription: "this is image1 description",
-          itemPrice: "7.50",
-        },
-        {
-          id: "2" + new Date(),
-          title: "Test title 2",
-          subTitle: "menu subtitle lorem ipsun test test test test !",
-          imgSrc:
-            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
-          imgDescription: "this is image2 description",
-          itemPrice: "7.50",
-        },
-        {
-          id: "3" + new Date(),
-          title: "Test title 3",
-          subTitle: "menu subtitle lorem ipsun test test test test !",
-          imgSrc:
-            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
-          imgDescription: "this is image3 description",
-          itemPrice: "7.50",
-        },
-        {
-          id: "4" + new Date(),
-          title: "Test title 4",
-          subTitle: "menu subtitle lorem ipsun test test test test !",
-          imgSrc:
-            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
-          imgDescription: "this is image1 description",
-          itemPrice: "9.99",
-        },
-        {
-          id: "5" + new Date(),
-          title: "Test title 5",
-          subTitle: "menu subtitle lorem ipsun test test test test !",
-          imgSrc:
-            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
-          imgDescription: "this is image2 description",
-          itemPrice: "3.99",
-        },
-        {
-          id: "6" + new Date(),
-          title: "Test title 6",
-          subTitle:
-            "menu subtitle lorem ipsun test test test test ! menu subtitle lorem ipsun test test test test subtitle lorem ipsun test test test test !",
-          imgSrc:
-            "https://as2.ftcdn.net/v2/jpg/01/39/41/31/500_F_139413171_2hAZi8ia6E054vO3ULfG6SY048RWTymM.jpg",
-          imgDescription: "this is image3 description",
-          itemPrice: "7.50",
-        },
-      ],
+      items,
+      siteTitle,
     };
   },
 };
@@ -92,6 +101,7 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/main.scss";
+
 .menu {
   display: flex;
   flex-direction: column;

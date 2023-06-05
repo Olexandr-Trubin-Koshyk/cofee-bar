@@ -10,10 +10,31 @@
   </button>
 </template>
 
-<script>
-export default {
-  props: ["className", "type", "handleClick", "buttonTitle"],
-};
+<script lang="ts">
+import ButtonType from "@/types/ButtonType";
+import { PropType } from "vue";
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  props: {
+    className: {
+      required: true,
+      type: String,
+    },
+    type: {
+      required: true,
+      type: String as PropType<ButtonType>,
+    },
+    handleClick: {
+      required: true,
+      type: Function as PropType<() => void>,
+    },
+    buttonTitle: {
+      required: true,
+      type: String,
+    },
+  },
+});
 </script>
 
 <style lang="scss" scoped>
