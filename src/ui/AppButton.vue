@@ -47,6 +47,7 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   min-width: 200px;
+  max-width: 240px;
   cursor: pointer;
   transition: border-color, background-color 0.2s ease-in-out;
 

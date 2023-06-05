@@ -28,12 +28,12 @@
             </div>
           </div>
           <div class="mainInfo__buyButton">
-            <VButton
+            <AppButton
               className="primary--2"
               buttonTitle="buy now"
               type="button"
               :handleClick="handleBuyNow"
-            ></VButton>
+            ></AppButton>
           </div>
         </div>
       </div>
@@ -44,11 +44,11 @@
 
 <script lang="ts">
 import { inject } from "vue";
-import VButton from "../ui/VButton.vue";
+import AppButton from "../ui/AppButton.vue";
 
 export default {
   components: {
-    VButton,
+    AppButton,
   },
   setup() {
     const siteTitle = inject("siteTitle");
