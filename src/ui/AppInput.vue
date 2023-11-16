@@ -25,7 +25,7 @@ export default defineComponent({
       type: String,
     },
   },
-  setup(_, { emit }) {
+  setup() {
     const inputValue = ref<string>("");
     const isInputError = ref<boolean>(false);
     const isInputSuccess = ref<boolean>(false);
